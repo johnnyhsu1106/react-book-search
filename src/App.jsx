@@ -11,10 +11,10 @@ import './App.css';
 const App = () => {
   const [query, setQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
-  const { books, isLoading, hasError, hasMore } = useBookSearch(query, pageNumber);
+  const {books, isLoading, hasError, hasMore} = useBookSearch(query, pageNumber);
 
   const observer = useRef();
-  const lastSearchResultRef = useCallback(node => {
+  const lastSearchResultRef = useCallback((node) => {
     if (isLoading) {
       return;
     }
