@@ -6,6 +6,8 @@ import Error from './Error';
 
 import useBookSearch from './useBookSearch';
 
+import './App.css';
+
 const App = () => {
   const [query, setQuery] = useState('');
   const [pageNumber, setPageNumber] = useState(1);
@@ -33,7 +35,7 @@ const App = () => {
       observer.current.observe(node)
     }
 
-  }, [isLoading, hasMore])
+  }, [isLoading, hasMore]);
 
 
   const handleInputSearch = (inputValue) => {
@@ -41,7 +43,7 @@ const App = () => {
     setPageNumber(1);
   };
   return (
-    <>
+    <> <h1>Search Books</h1>
       <SearchBar onChangeQuery={handleInputSearch}/>
       <SearchResults books={books} lastSearchResultRef={lastSearchResultRef}/>
       <Loading isLoading={isLoading} />
