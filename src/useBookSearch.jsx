@@ -6,8 +6,6 @@ const useBookSearch = (query, pageNumber) => {
   const [hasError, setHasError] = useState(false);
   const [hasMore, setHasMore] = useState(false);
 
-
-
   useEffect(() => {
     setBooks([]);
   }, [query])
@@ -15,14 +13,14 @@ const useBookSearch = (query, pageNumber) => {
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
-    
+
     setIsLoading(true);
     setHasError(false);
 
     fetch(`https://openlibrary.org/search.json?q=${query}&page=${pageNumber}`, { signal })
       .then((res) => {
         if (!res.ok) {
-          throw Error('Invalid HTTPs Request');
+          throw new Error('Invalid HTTPs Request');
         }
         return res.json();
 
