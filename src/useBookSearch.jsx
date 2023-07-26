@@ -6,14 +6,16 @@ const useBookSearch = (query, pageNumber) => {
   const [hasError, setHasError] = useState(false);
   const [hasMore, setHasMore] = useState(false);
 
-  const controller = new AbortController();
-  const { signal } = controller;
+
 
   useEffect(() => {
     setBooks([]);
   }, [query])
 
   useEffect(() => {
+    const controller = new AbortController();
+    const { signal } = controller;
+    
     setIsLoading(true);
     setHasError(false);
 
