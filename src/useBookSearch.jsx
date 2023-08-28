@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 
 const useBookSearch = (query, pageNumber) => {
   const [books, setBooks] =  useState([]);
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [hasMore, setHasMore] = useState(false);
 
@@ -39,6 +39,9 @@ const useBookSearch = (query, pageNumber) => {
         }
         setHasError(true);
         console.error(err); 
+      
+      }).finally(() => {
+        setIsLoading(false);  
       });
 
     return () => {

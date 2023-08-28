@@ -1,6 +1,21 @@
-import React from 'react'
+import Loading from './Loading';
+import Error from './Error';
 
-const SearchResults = ({ books, lastSearchResultRef }) => {
+const SearchResults = ({
+  isLoading,
+  hasError, 
+  books, 
+  lastSearchResultRef 
+}) => {
+
+  if (isLoading) {
+    return <Loading isLoading={isLoading} />
+  }
+
+  if (hasError) {
+    return <Error hasError={hasError} />
+  }
+
   
   return (
     <ul>
