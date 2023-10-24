@@ -9,7 +9,6 @@ Checkout this repo, install dependencies, then start the gulp process with the f
 > npm dev
 ```
 
-![image](https://github.com/johnnyhsu1106/react-book-search-with-infinite-scrolling/assets/18588513/b2c06147-93d5-41be-ba24-3236a72bbdb0)
+![image](https://github.com/johnnyhsu1106/react-book-search/assets/18588513/95585202-7d8f-44f6-88ae-90358a745a4e)
 
-![image](https://github.com/johnnyhsu1106/react-book-search-with-infinite-scrolling/assets/18588513/26bd9143-d6fa-48fc-a15f-900c203def32)
-
+![image](https://github.com/johnnyhsu1106/react-book-search/assets/18588513/5e75cde8-053d-405d-8ead-f4a3687f1b21)
